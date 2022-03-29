@@ -1,0 +1,15 @@
+
+<table>
+    <tr>
+        <th *ngFor="let columns of displayedColumns">{{columns}}</th>
+    </tr>
+    <tr *ngFor="let depa of depas" [ngClass]="!depa.available ? 'not-available' : ''">
+        <td>{{depa.id}}</td>
+        <td>{{depa.price}}</td>
+        <td>{{depa.model}}</td>
+        <td>{{depa.type}}</td>
+        <td>{{depa.city}}</td>
+        <td>{{depa.currency}}</td>
+        <td>{{depa.available}}</td>
+    </tr>
+</table>

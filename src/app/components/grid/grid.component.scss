@@ -1,0 +1,18 @@
+
+
+table {
+  border-collapse: collapse;
+}
+
+tr {
+  border-bottom: 1px solid black;
+}
+
+td{
+  min-width: 100px;
+  height: 24px;
+}
+
+.not-available {
+  background-color: red;
+}
