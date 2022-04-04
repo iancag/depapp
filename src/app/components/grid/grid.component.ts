@@ -7,7 +7,8 @@ const depasDataSource = [{
   type: 'rent',
   city: 'paris',
   currency: 'eur',
-  available: 1
+  available: 1,
+  moveDate: '2020-04-02'
 },{
   id: 2,
   price: 700,
@@ -15,7 +16,8 @@ const depasDataSource = [{
   type: 'rent',
   city: 'nyc',
   currency: 'usd',
-  available: 0
+  available: 0,
+  moveDate: '2020-05-01'
 },{
   id: 3,
   price: 500,
@@ -23,7 +25,8 @@ const depasDataSource = [{
   type: 'rent',
   city: 'madrid',
   currency: 'eur',
-  available: 1
+  available: 1,
+  moveDate: '2020-04-15'
 }];
 
 @Component({
@@ -32,7 +35,7 @@ const depasDataSource = [{
   styleUrls: ['./grid.component.scss']
 })
 export class GridComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'price', 'model', 'type', 'city', 'currency', 'status']
+  displayedColumns: string[] = ['id', 'price', 'model', 'type', 'city', 'currency', 'status', 'move date']
   depas = depasDataSource;
 
   constructor() { }
