@@ -1,0 +1,43 @@
+
+<div class="form-center">
+    <form class="form-field" [formGroup]="formularioContacto" (ngSubmit)="guardar()">
+        <mat-form-field>
+            <mat-label>Id</mat-label>
+            <input matInput type="text" formControlName="id" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Price</mat-label>
+            <input matInput type="text" formControlName="price" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>model</mat-label>
+            <input matInput type="text" formControlName="model" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Type</mat-label>
+            <input matInput type="text" formControlName="type" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>City</mat-label>
+            <input matInput type="text" formControlName="city" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Currency</mat-label>
+            <input matInput type="text" formControlName="currency" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Currency</mat-label>
+            <input matInput type="text" formControlName="currency" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>available</mat-label>
+            <input matInput type="text" formControlName="available" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>moveDate</mat-label>
+            <input matInput type="text" formControlName="moveDate" required>
+        </mat-form-field>
+
+        <button type="submit">Confirmar</button>
+    </form>
+</div>

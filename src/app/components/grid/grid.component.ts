@@ -1,33 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
-const depasDataSource = [{
-  id: 1,
-  price: 1000,
-  model: 'apartment',
-  type: 'rent',
-  city: 'paris',
-  currency: 'eur',
-  available: 1,
-  moveDate: '2020-04-02'
-},{
-  id: 2,
-  price: 700,
-  model: 'apartment',
-  type: 'rent',
-  city: 'nyc',
-  currency: 'usd',
-  available: 0,
-  moveDate: '2020-05-01'
-},{
-  id: 3,
-  price: 500,
-  model: 'apartment',
-  type: 'rent',
-  city: 'madrid',
-  currency: 'eur',
-  available: 1,
-  moveDate: '2020-04-15'
-}];
+interface Depas {id: number; price: number; model: string; type: string; city: string; currency: string; available: number; moveDate: string;}
 
 @Component({
   selector: 'app-grid',
@@ -35,11 +8,13 @@ const depasDataSource = [{
   styleUrls: ['./grid.component.scss']
 })
 export class GridComponent implements OnInit {
+  @Input() depasDataSource: Depas[] = []
   displayedColumns: string[] = ['id', 'price', 'model', 'type', 'city', 'currency', 'status', 'move date']
-  depas = depasDataSource;
+  depas = this.depasDataSource;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.depas = this.depasDataSource;
   }
 }

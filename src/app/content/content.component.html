@@ -1,4 +1,5 @@
 <div class="content">
   <p>Departamentos Disponibles</p>
-  <app-grid style="display: flex; justify-content: center"></app-grid>
+  <app-grid style="display: flex; justify-content: center" [depasDataSource]="depas"></app-grid>
+  <app-form (apartmentData)="onAdd($event)"></app-form>
 </div>
